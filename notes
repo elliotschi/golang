@@ -5,3 +5,42 @@ pkg: contains compiled files
 src: contains package source files
 
 25 keywords
+
+:= used inside functions => you don't need to put a declaration.
+
+otherwise you need var, const
+
+datatypes: boolean, numeric types: int8 int32, strings("" or ``) 
+- can access strings by variableName[0]
+
+- storing things in bytes
+
+- there is one error type, but there is also a package called errors that you can import
+
+- group definitions import (), const(), var()
+
+arrays: 
+var arr[n]type
+
+n: length of array : since length is included in the declaration, we cannot change the size of arrays
+type: the type of its elements
+
+- want to use slice to get a copy of an array
+
+c := [...]int{4,5,6} - using this syntax we read all the elements and finds the length
+
+nestedArray := [2][4]int{[4]int{1,2,3,4}, [4]int{5,6,7,8}}
+
+more concise way of doing this is 
+
+nestedArray := [2][4]int{{1,2,3,4}, {5,6,7,8}}
+
+slice: slice points to an underlying array where the length is not required
+
+array[i:j] is a copy from i to j
+
+array[:n] is the same as array[0:n]
+array[n:] is the same as array[n:len(array)]
+array[:] slices the whole array
+
+slice is a reference type, so any changes will change the variables pointing to the same slice or array.
