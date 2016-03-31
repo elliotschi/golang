@@ -3,3 +3,5 @@ bin: contains executable files
 pkg: contains compiled files
 
 src: contains package source files
+
+25 keywords
