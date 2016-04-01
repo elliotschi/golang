@@ -44,3 +44,56 @@ array[n:] is the same as array[n:len(array)]
 array[:] slices the whole array
 
 slice is a reference type, so any changes will change the variables pointing to the same slice or array.
+
+MAPS: objects
+
+map[keyType]valueType for definition
+- specify the type for the keys and the value
+
+gets & sets
+
+ie: var numbers map[string] int
+
+or 
+
+numbers := make(map[string]int)
+
+- maps are disorderly, no fixed length, but it has a len property
+
+use delete to delete and element
+delete(map, key)
+
+-make vs new:
+
+make does memory allocation for built in models, and new is for types' memory allocation
+
+- new returns pointer
+
+IF - doesn't need parens in Go.
+- it can have one init statement before the conitional : the variables defined in in there can be used in the block of the if statement
+
+ie: 
+if x: computedValue(); x > 10 {
+}
+
+this will call the function computedValue and then see if x is > 10
+
+else if and else are the same
+
+GOTO - keyword: goto reroutes the control flow to a previously defined label
+
+labels are anything that ends with ":"
+
+for expression1; expression2; exression3
+
+we can omit expressions if we want
+for is identical to while
+
+break & continue both exist
+
+switch syntax:
+
+switch sExpr {
+  case expr1:
+    some instructions
+}
