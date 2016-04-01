@@ -97,3 +97,8 @@ switch sExpr {
   case expr1:
     some instructions
 }
+
+functions:
+
+- use the function keyword
+- can have multiple returns
