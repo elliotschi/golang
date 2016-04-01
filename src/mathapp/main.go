@@ -1,11 +1,11 @@
 //$GOPATH/src/mathapp/main.go source code.
 package main
 
-import (
-    "mymath"
-    "fmt"
-)
-
+// import (
+//     "mymath"
+//     "fmt"
+// )
+import "fmt"
 // func main() {
 //     fmt.Printf("Hello, world. Sqrt(2) = %v\n", mymath.Sqrt(2))
 // }
@@ -13,9 +13,8 @@ import (
 func max(a, b int) int {
   if a > b {
     return a
-  } else {
-    return b
   }
+  return b
 }
 
 func main() {
