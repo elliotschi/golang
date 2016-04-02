@@ -10,6 +10,10 @@ import "fmt"
 //     fmt.Printf("Hello, world. Sqrt(2) = %v\n", mymath.Sqrt(2))
 // }
 
+func myfunc(arg ...int) {
+  
+}
+
 func max(a, b int) int {
   if a > b {
     return a
