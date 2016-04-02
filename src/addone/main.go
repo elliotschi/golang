@@ -1,9 +1,9 @@
 package main
 import "fmt"
 
-func add1(a int) int {
-  a = a + 1
-  return a
+func add1(a *int) int {
+  *a = *a + 1
+  return *a
 }
 
 func main() {
@@ -11,7 +11,7 @@ func main() {
   
   fmt.Println("x = ", x)
   
-  x1 := add1(x)
+  x1 := add1(&x)
   
   fmt.Println("x + 1 = ", x1)
   
