@@ -156,3 +156,9 @@ ie. type person struct {
 var P person
 P.name = ''
 P.age = 1
+
+- all the types in Go can be used as embedded fields
+
+overloading is like accessing the prototype chain - getting the fields from upper levels of the struct
+
+if they have two of the same fields
