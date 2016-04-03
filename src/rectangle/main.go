@@ -4,10 +4,12 @@ import (
   "math"
 )
 
+// Rectangle is a struct with a width and a height
 type Rectangle struct {
   width, height float64
 }
 
+// Circle is a struct with a radius so that we can calculate the area later.
 type Circle struct {
   radius float64
 }
