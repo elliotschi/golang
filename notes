@@ -102,3 +102,20 @@ functions:
 
 - use the function keyword
 - can have multiple returns
+
+pointers:
+
+faster and can use one reference for many different functions
+
+defer keyword:
+
+multiple defers will be executed backwards
+
+functions as values and as types:
+
+functions are also variables so we can define them with type
+
+type typeName func(input1 inputType1 , input2 inputType2 [, ...]) (result1 resultType1 [, ...])
+
+declaring functions as types allows use to pass functions to other functions as values
+
