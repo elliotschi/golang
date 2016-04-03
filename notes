@@ -119,3 +119,40 @@ type typeName func(input1 inputType1 , input2 inputType2 [, ...]) (result1 resul
 
 declaring functions as types allows use to pass functions to other functions as values
 
+- Golang doesn't have try catch, so there is panic and recover instead
+
+Panic is a build in function to break the normal flow of a function. the function will not run but the defers will continue to execute and then wait until all those functions return from panic
+
+recover is a built in function that recovers go from panic status. so it is useful to put recover functions inside of defer functions
+
+main vs init
+
+main function can only be used in the main package and init can be used in any package..
+- these two functions can not have arguments or returns
+- they are called automatically
+
+- imports/packages
+- dot operators in imports allow you to omit the package name
+
+ie: import (
+  . "fmt"
+) 
+=> whenever we use fmt functions, we do not need to put fmt.printf
+
+- alias operator basically like import * as in es6
+
+- '_' operator
+this means we just want to execute the init function but not use any of its packages
+
+STRUCT
+- similar to classes?
+- we can declare new containers like creating a type called person in which we can give them properties
+
+ie. type person struct {
+  name string
+  age int
+}
+
+var P person
+P.name = ''
+P.age = 1
