@@ -162,3 +162,11 @@ P.age = 1
 overloading is like accessing the prototype chain - getting the fields from upper levels of the struct
 
 if they have two of the same fields
+
+Object-oriented in Go..
+- using `method` - using a function as a field in a struct
+- method is associated with the type
+
+syntax of declaring a method:
+
+func (r ReceiverType) funcName(parameters) (results)
