@@ -226,5 +226,34 @@ ie : main() is a goroutine
 
 -> go hello(a,b,b)
 
+runtime.Gosched() lets the cpu execute other go routines
+
+runtime.GOMAXPROCS(n) to set the number of cores you want to use.
+
+channels:
+- goroutines run in the same memory address space
+- go uses channel as a communication mechanism
+- channel is a two way pipeline = use it to send or receive data
+keyword: chan
+- you must use make to create a new channel
+
+ci := make(chan int)
+cs := make(chan string)
+cf := make(chan interface{})
+
+ch <- v // send v to channel ch
+v := <-ch // receive data from ch, and assign to v
+
+Buffered channels:
+- buffered channels can store more than a single element. ie. ch := make(chan bool, 4) => creating a channel that can store 4 boolean elements.
+
+range and close:
+- we can use range to operate on buffer channels like slice and map
+- for i := range c will not stop reading data from channel until it is closed
+- once you close your channel, you can not read data from it.
+- only close them if you are sure it is completely useless.
+
+Select:
+select keyword listens to many channels
 
 
