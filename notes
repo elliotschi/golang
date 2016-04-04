@@ -190,3 +190,41 @@ type months map[string]int
 
 INTERFACE
 - short: a set of methods that we use to define a set of actions
+- an interface defines a set of methods, so if a type implements all the methods we say that it implements the interface
+
+- an interface can be implemented by any type and one type can implement many interfaces simultaneously
+
+Embedded interfaces
+- go has a lot of built in logic syntax, such as anonymous fields in struct
+- we can use interfaces as anonymous fields => these are called embedded interfaces
+- if an interface has another interface embedded in it, has all the methods that the embedded interface has
+
+Reflection
+- determining information at runtime.
+- reflect package
+3 steps
+- convert interface to reflect types
+
+reflect.TypeOf(i) or reflect.ValueOf(x)
+
+- convert reflected types to get the values we need
+- to change values of the reflected types, we make it modifiable
+
+var x float64 = 3.4
+p := reflect.ValueOf(&x)
+v := p.Elem()
+v.SetFloat(7.1)
+
+CONCURRENCY
+
+goroutine: dozen of goroutines may only have 5 or 6 threads. They work differently from threads
+- one goroutine uses 4-5 kb of stack memory
+- more lightweight than threads
+- they run on the thread manager at runtime in Go.
+-we use the go keywoard to create a goroutine.
+ie : main() is a goroutine
+
+-> go hello(a,b,b)
+
+
+

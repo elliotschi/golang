@@ -15,7 +15,7 @@ type Person struct {
 }
 
 func (p Person) String() string {
-  return "(name: " + p.name + " - age: " + strconv.Itoa(p.age) + "years)"
+  return "(name: " + p.name + " - age: " + strconv.Itoa(p.age) + " years)"
 }
 
 func main() {
