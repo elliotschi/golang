@@ -187,3 +187,6 @@ type months map[string]int
 
 - use a pointer `b` if you want to change the actual value and not the copy of the value
 - methods are named capital or lowercase based of whether it is public or private
+
+INTERFACE
+- short: a set of methods that we use to define a set of actions
