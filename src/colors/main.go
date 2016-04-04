@@ -16,7 +16,7 @@ type Box struct {
     color Color
 }
 
-type BoxList []Box //a slice of boxes
+type BoxList []Box
 
 func (b Box) Volume() float64 {
     return b.width * b.height * b.depth
