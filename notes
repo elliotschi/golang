@@ -256,4 +256,13 @@ range and close:
 Select:
 select keyword listens to many channels
 
+Timeout:
+- when a goroutine becomes blocked we use a timeout in the select
 
+runtime:
+the package runtime has some functions for dealing with goroutines
+- runtime.Goexit() : exits the current goroutine, but defered functions will be executed as usual
+- runtime.Gosched() : lets the scheduler execute other goroutines and comes back sometime
+- runtime.NumCPUT() int : returns the number of cpu cores
+- runtime.NumGoroutine() int : returns the number of goroutines
+- runtime.GOMAXPROCS(n int) int : sets how may cpu cores you want to use

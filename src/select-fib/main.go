@@ -12,7 +12,7 @@ func fibonacci(c, quit chan int) {
         
       case <- quit:
         fmt.Println("quit")
-          return;
+          return
     }
   }
 }
