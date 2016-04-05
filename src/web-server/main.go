@@ -35,9 +35,11 @@ func login(w http.ResponseWriter, r *http.Request) {
   } else {
     r.ParseForm()
     
-    fmt.Println("username: ", r.Form["username"])
+    fmt.Println("username: ", template.HTMLEscapeString(r.Form.Get("username")))
     
-    fmt.Println("[password]: ", r.Form["password"])
+    fmt.Println("password: ", template.HTMLEscapeString(r.Form.Get("password")))
+    
+    template.HTMLEscape(w, []byte(r.Form.Get("username")))
   }
 }
 
