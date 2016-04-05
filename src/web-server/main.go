@@ -11,6 +11,7 @@ import (
   "io"
   "strconv"
   "os"
+  "goredis"
 )
 
 func sayhelloName(w http.ResponseWriter, r *http.Request) {
