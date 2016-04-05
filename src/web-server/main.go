@@ -58,6 +58,12 @@ func login(w http.ResponseWriter, r *http.Request) {
     fmt.Println("password: ", template.HTMLEscapeString(r.Form.Get("password")))
     
     template.HTMLEscape(w, []byte(r.Form.Get("username")))
+    
+    expiration := time.Now().Add(365 * 24 * time.Hour)
+    
+    cookie := http.Cookie{Name: r.Form.Get("username"), Value: r.Form.Get("password"), Expires: expiration}
+    
+    http.SetCookie(w, &cookie)
   }
 }
 
