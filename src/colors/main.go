@@ -21,9 +21,7 @@ type BoxList []Box
 
 func (b Box) Volume() float64 {
 	return b.width * b.height * b.depth
-}
-
-func (b *Box) SetColor(c Color) {
+} func (b *Box) SetColor(c Color) {
 	b.color = c
 }
 
@@ -40,7 +38,7 @@ func (bl BoxList) BiggestsColor() Color {
 }
 
 func (bl BoxList) PaintItBlack() {
-	for i, _ := range bl {
+	for i := range bl {
 		bl[i].SetColor(BLACK)
 	}
 }
