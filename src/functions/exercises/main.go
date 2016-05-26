@@ -22,6 +22,10 @@ func ex1(n int) (int, bool) {
   return n/2, n % 2 == 0
 }
 
+func ex1float(n int) (float64, bool) {
+  return float64(n)/2, n % 2 == 0
+}
+
 var ex2 = func(n int) (int, bool) {
   return n/2, n % 2 == 0
 }
